@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Project Two: Collection </title>
+		<link rel="stylesheet" type="text/css" href="_css/styles.css">
+		<style type="text/css">
+
+		#gallery img { width:200px; }
+
+			#theLight { 
+				display:none;
+
+				background-color:#fff;
+				padding:25px;
+
+				width:600px;
+				height:350px;
+
+				position:fixed;
+				left:50%;
+				top:50%;
+
+				margin-left:-300px;
+				margin-top:-200px;
+
+				z-index:10;
+			}
+			#theLight .close { }
+			#theLight .target h1 { font-size:15px; padding:0px; margin:0px; }
+			#theLight .target p { font-size:12px; padding:0px; margin:0px; }
+
+			#theDark { 
+				display:none;
+				color:#fff;
+				background-color:#000;
+				padding:25px;
+				/*width:100%;*/
+				/*height:50px;*/
+
+				position:fixed;
+
+				left:0px;
+				top:0px;
+				right:0px;
+				bottom:0px;
+
+				z-index:9;
+
+				opacity:.8;
+			}
+
+	
+		</style>
+	
+	</head>
+	<body>
+		<div class="container">
+			<img src="_images/Logo.png">
+			<nav id="mainmenu">
+				<a href="index.html">Home</a>
+				<a href="news.html">News</a>
+				<a href="collection.html">Collection</a>
+				<a href="gallery.html">Gallery</a>
+				<a hred="blog.html">Blog</a>
+		</div>
+		<header id="masthead">
+
+			<div class="container">
+			<header id="boom"> <h1>COLLECTION</h1>
+
+			</header>
+			
+			<div class="container" style="padding-right: 25px; width: 98% ">
+			<header id="masthead"></header>
+			<section id="gallery">
+				<img src="_images/shoes/shoes_01.jpg" title="Collection" alt="Summer Injection" />
+				<img src="_images/shoes/shoes_02.jpg" title="Collection" alt="Spring TK Society" />
+				<img src="_images/shoes/shoes_03.jpg" title="Collection" alt="Gray Tie Dye Suede" />
+				<img src="_images/shoes/shoes_04.jpg" title="Collection" alt="Holiday Skyptop 6" />
+				<img src="_images/shoes/shoes_05.jpg" title="Collection" alt="Royal Suede Pack" />
+				<img src="_images/shoes/shoes_06.jpg" title="Collection" alt="Fall Line" />
+				<img src="_images/shoes/shoes_07.jpg" title="Collection" alt="Vaider TUF" />
+				<img src="_images/shoes/shoes_08.jpg" title="Collection" alt="Hero Blacktape Series" />
+				<img src="_images/shoes/shoes_09.jpg" title="Collection" alt="Avenger Blue Pack" />
+				<img src="_images/shoes/shoes_10.jpg" title="Collection" alt="Red Carpet Series" />
+				<img src="_images/shoes/shoes_11.jpg" title="Collection" alt="Skyptop Kids" />
+				<img src="_images/shoes/shoes_12.jpg" title="Collection" alt="G-Shock Collaboration" />
+			</section>
+			<div id="theLight">
+				<img class="close" src="_css/close.png" height="42" width="42" />
+				<div class="target">
+					This is the light div. Our chosen elements will be displayed here.
+				</div>
+			</div>
+			<div id="theDark"></div>
+
+				
+
+			
+			</div>
+			
+		</header>
+		<nav id="mainmenu">
+			
+		</nav>
+		
+		<!-- <footer id="epilogue"> -->
+		
+		<script type="text/javascript" src="_js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+				// console.log('set');
+				var theLight = $('#theLight');
+				var theDark = $('#theDark');
+				var closeButton = theLight.find('.close');
+				var theTarget = theLight.find('.target');
+				var theImages = $('#gallery img');
+
+				// event listeners
+				theImages.click(light_on);
+				closeButton.click(light_off);
+				theDark.click(light_off);
+
+				function light_on() {
+					//Grabbing Assets
+					var thisImage = $(this).clone();
+
+					// Grabbing properties
+					// var theSrc = thisImage.attr('src');	
+					var theTitle = thisImage.attr('title');
+					var theDesc = thisImage.attr('alt');
+
+					// updating the light target content
+					theTarget.html(thisImage);
+					$('<h1>'+theTitle+'</h1>').appendTo(theTarget);
+					$('<p>'+theDesc+'</p>').appendTo(theTarget);
+
+
+					// fade in the light
+					theLight.css({'opacity':'0'}).show();
+					theLight.animate({'opacity':'1'},2000);
+					
+
+					//show the dark
+					theDark.show();
+				}
+
+				function light_off() {
+					theLight.hide();
+					theDark.hide();
+				}
+			});
+
+
+
+
+
+			</script>
+		</footer>
+	</body>
+</html>

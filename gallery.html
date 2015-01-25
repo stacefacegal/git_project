@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Supra: Gallery </title>
+		<link rel="stylesheet" type="text/css" href="_css/styles.css">
+		<style type="text/css">
+
+		#faded .slides { 
+				border: solid 10px gray;
+				width: 600px;
+				height: 300px;
+
+				position: relative;
+
+				margin: 25px auto;
+
+			}
+			#faded .slides img{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+
+			#horizontal .slides {
+				border: solid 10px gray;
+				width: 600px;
+				height: 300px;
+				overflow:hidden;
+				margin: 25px auto;
+			}
+
+			#horizontal .slides .drawer {
+				
+				width: 3000px;
+			}
+			
+			#horizontal .slides .drawer img{
+				float: left;
+			}
+
+			
+		
+		</style>
+	
+	</head>
+	<body>
+		<div class="container">
+			<img src="_images/Logo.png">
+			<nav id="mainmenu">
+				<a href="index.html">Home</a>
+				<a href="news.html">News</a>
+				<a href="collection.html">Collection</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="blog.html">Blog</a>
+		</div>
+		<header id="masthead">
+			<div class="container">
+			<header id="boom"> <h1>GALLERY</h1>
+
+			</header>
+		
+
+		     <section id="faded">
+				
+				<h1>HATS</h1>
+							
+				<div class="slides">
+					<img src="_images/gallery/hat01.jpg" height="300" width="600" />
+					<img src="_images/gallery/hat02.jpg" height="300" width="600" />
+					<img src="_images/gallery/hat03.jpg" height="300" width="600" />
+					<img src="_images/gallery/hat04.jpg" height="300" width="600" />
+					<img src="_images/gallery/hat05.jpg" height="300" width="600" />
+				</div>
+			</section>
+			
+			<section id="horizontal"> 
+				
+				<h1>T-SHIRTS</h1>
+					<div class="slides">
+					<div class="drawer">
+					<img src="_images/gallery/TEE_01.jpg" height="300" width="600" />
+					<img src="_images/gallery/TEE_02.jpg" height="300" width="600" />
+					<img src="_images/gallery/TEE_03.jpg" height="300" width="600" />
+					<img src="_images/gallery/TEE_04.jpg" height="300" width="600" />
+					<img src="_images/gallery/TEE_05.jpg" height="300" width="600" />
+				</div>
+			</section>
+
+			
+		</header>
+		<nav id="mainmenu">
+			
+		</nav>
+		
+		<!-- <footer id="epilogue"> -->
+		
+		<script type="text/javascript" src="_js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+		
+
+		$(document).ready(function() {
+			// console.log('hello');
+
+			setTimeout(fade, 3000);
+			
+			function fade() {
+				// console.log('fade working');
+			
+			var lastImg = $("#faded .slides img:last");
+
+			lastImg.animate({"opacity":"0"},1000, shuffle);
+
+			function shuffle() {
+				lastImg.prependTo("#faded .slides");
+				lastImg.css({"opacity":"1"});
+				// console.log('shuffle is working');
+
+				setTimeout(fade, 3000);
+
+
+
+			}
+
+			
+
+		}
+
+
+
+		});
+
+		$(document).ready(function(){
+
+				// slide();
+				setTimeout(slide, 2000);
+
+				function slide() {
+					var firstImg = $("#horizontal .slides .drawer img:first")
+
+					firstImg.animate({"margin-left":"-600px"},1000, function(){
+						// console.log("shuffle");
+						firstImg.appendTo("#horizontal .slides .drawer");
+						firstImg.css({"margin-left":"0px"});
+
+						setTimeout(slide, 3000);
+
+					
+					});
+
+				
+
+
+
+
+				}
+
+
+
+			
+			});	
+
+
+
+	
+
+	
+
+				</script>		
+			</section>
+		</div>
+	</body>
+</html>
+			
+

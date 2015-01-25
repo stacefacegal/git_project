@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Supra: Home </title>
+		<link rel="stylesheet" type="text/css" href="_css/styles.css">
+		<link href="_css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+
+		
+		</style>
+	</head>
+	<body>
+		<div class="container">
+				<!-- put logo here <img src=""> -->
+				<img src="_images/Logo.png">
+				<nav id="mainmenu">
+					<a href="index.html">Home</a>
+					<a href="news.html">News</a>
+					<a href="collection.html">Collection</a>
+					<a href="gallery.html">Gallery</a>
+					<a href="blog.html">Blog</a>
+				</nav>
+		</div>
+
+		<header id="masthead">
+			<img src="_images/skateday.png"
+				style="width: 98%;">
+
+		</header>
+		
+		<nav id="mainmenu">
+			<img src="_images/suprabanner.png" 
+				style=" width: 98%;">
+		</nav>
+
+		
+
+		<header id="masthead"> 
+			<div class="container"> 
+
+			<article id="rollover">
+			
+				<div class="gallery">
+					<img src="_images/gallery/news-shoe-01.png" />
+					<img src="_images/gallery/news-shoe-02.png" />
+					<img src="_images/gallery/news-shoe-03.png" />
+					<img src="_images/gallery/news-shoe-04.png" />
+					
+			
+		</div>
+	</article>
+
+		</header>
+		</div>
+			
+		</article>
+		<!-- <footer id="epilogue"> -->
+
+		<script type="text/javascript" src="_js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(setThingsUp);
+
+		function setThingsUp(){
+			console.log('we run the world');
+		
+			$(".gallery img").animate({'opacity':'.5'},500);
+
+			$(".gallery img").mouseover(roll_over);
+			$(".gallery img").mouseout(roll_out);
+
+		}
+		
+		function roll_over(){
+			console.log("over");
+
+			var currImg = $(this);
+			currImg.stop(true).animate({
+				'opacity':'1',
+				'height':'50px'
+			},1000);
+		}
+
+		function roll_out(){
+			console.log("out");
+
+			var currImg = $(this);
+			currImg.stop(true).animate({'opacity':'.5','height':'88px'},1000);
+
+
+		}
+
+		
+
+
+			</script>		
+		</footer>
+	</body>
+</html>

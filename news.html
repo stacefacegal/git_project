@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Supra: News </title>
+		<link rel="stylesheet" type="text/css" href="_css/styles.css">s
+		<style type="text/css">
+		/*inserted*/
+		#swapMoreDetails .enlarged {
+				width: 98%;
+				margin: 1% auto;
+				border-radius:5px;
+				background-color:#fff;
+				font-family: 'source_sans_proextralight';
+			}
+			#swapMoreDetails .enlarged h1 { margin:0px; }
+			#swapMoreDetails .enlarged p { margin:0px; }
+			#swapMoreDetails .gallery { text-align:center; } 
+			#swapMoreDetails .gallery img {
+				width: 125px;
+				margin-bottom: 10px;
+				position: relative;
+ 			}
+		
+
+ 		/*inserted*/
+			
+		</style>
+	</head>
+	<body>
+			<div class="container">
+				<img src="_images/Logo.png">
+				<nav id="mainmenu">
+					<a href="index.html">Home</a>
+					<a href="news.html">News</a>
+					<a href="collection.html">Collection</a>
+					<a href="gallery.html">Gallery</a>
+					<a href="blog.html">Blog</a>
+			</div>
+
+		<header id="masthead">
+
+			<div class="container">
+			<header id="boom"> <h1>NEWS</h1>
+
+			</header>
+
+			<h1>THE WOLF</h1>
+
+			<h2>August 26, 2013</h2>
+
+			The new <b>Wolf</b> is a rugged, eight-eyelet boot that blends combat style with modern fashion and the comfort of a sneaker sole. The three new styles just released are all constructed using premium materials and durable stitching. A heel zipper allows for easy on and off, and the raw interior and padded tongue give an authentic combat boot feel. The upper rests on a modern cup sole, with durable sidewall stitching, and a unique SUPRAFOAM midsole lies beneath the footbed providing all-day comfort and cushioning. 
+
+			<b>Black Satin</b> TUF on the vamp and eye stay is complemented by black Block-Stitch TUF. Black rope laces, black metal eyelets, and a translucent cup sole.
+			</div>
+		
+		<!-- inserted -->
+
+		<article id="swapMoreDetails">
+				<!-- <h1>Swapping More Than Just Images</h1> -->
+				<div class="enlarged">
+					<img src="_images/wolf01.jpg"/>
+					<h1>WOLF</h1>
+					<p>
+						Introducing our NEW LINE of WOLF
+					</p>
+				</div>
+				<div class="gallery">
+					<img 
+						class="img1"
+						src="_images/wolf02.jpg"
+						title="WOLF I"
+						alt="Black Satin TUF on the vamp and eye stay is complemented by black Block-Stitch TUF. Black rope laces, black metal eyelets, and a translucent cup sole."/>
+					<img 
+						class="img2"
+						src="_images/wolf01.jpg"
+						title="WOLF I"
+						alt="." />
+					<img 
+						class="img3"
+						src="_images/wolf03.jpg"
+						title="WOLF I"
+						alt="." />
+					<img 
+						class="img4"
+						src="_images/wolf04.jpg"
+						title="WOLF I"
+						alt="." />
+					<img 
+						class="img5"
+						src="_images/wolf05.jpg"
+						title="WOLF II"
+						alt="Smooth, blue leather is contrasted by warm, brown canvas, with authentic boot laces, hexagonal brass metal eyelets, and a white cup sole." />
+					<img 
+						class="img6"
+						src="_images/wolf06.jpg"
+						title="WOLF III"
+						alt="Entirely enveloped by black waxed suede with hexagonal metal eyelets, black waxed laces, and white cup sole." />
+
+				</div>
+			</article>
+			
+		
+		<!-- <footer id="epilogue"> -->
+		
+		<script type="text/javascript" src="_js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(setThingsUp);
+
+		function setThingsUp(){
+			console.log('we run the world');
+		
+		}
+
+		//1.set things up
+		var theLarge = $(".enlarged img");
+		var theLargeH1 = $(".enlarged h1");
+		var theLargeP = $(".enlarged p");
+
+		var image1 = $(".gallery .img1");
+		var image2 = $(".gallery .img2");
+		var image3 = $(".gallery .img3");
+		var image4 = $(".gallery .img4");
+		var image5 = $(".gallery .img5");
+		var image6 = $(".gallery .img6");
+
+		//2. declare functions
+		function manage_thumb(theImage){
+			//console.log(theImage);
+
+			//1. set things up
+			var theSrc = theImage.attr('src');
+			var theTitle = theImage.attr('title');
+			var theDesc = theImage.attr('alt');
+
+			//2. declare functions
+			function image_over(){
+				// console.log("i am still working");
+				theLarge.attr('src',theSrc);
+				theLargeH1.html(theTitle);
+				theLargeP.html(theDesc);
+
+				theImage.stop(true).animate({
+					'opacity':'.5',
+					'top':'-10px'
+				},500);
+
+
+			}
+			function image_out(){
+				// console.log("mouse out working");
+				
+				theImage.stop(true).animate({
+					'opacity':'1',
+					'top':'0px'
+				},500);
+			}
+
+			//3.trigger
+			theImage.mouseover(image_over);
+			theImage.mouseout(image_out);
+		}
+
+		//3. trigger
+		manage_thumb(image1);
+		manage_thumb(image2);
+		manage_thumb(image3);
+		manage_thumb(image4);
+		manage_thumb(image5);
+		manage_thumb(image6);
+		
+
+		</script>
+
+
+
+
+			</script>	
+		</footer>
+	</body>
+</html>

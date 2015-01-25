@@ -1,0 +1,126 @@
+@import url(bangla/stylesheet.css);
+@import url(sourcesans/stylesheet.css);
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
+
+
+body { background-color: #231f20; }
+
+section {
+	padding:15px;
+	/*border:dotted 3px #a7b6bf;*/
+	margin:15px 0px;
+	/*background-color: #231f20;*/
+}
+
+
+.container {
+	width: 98%;
+	margin: 1% auto;
+	background-color: #eee;
+	padding:25px;
+	border-radius: 5px;
+	font-family: 'source_sans_proextralight';
+}
+
+#masthead { 
+	/*background-color: #231f20;*/
+	padding:25px; 
+	text-align:center;
+}
+#mainmenu { 
+	background-color: #231f20; 
+	padding:5px;
+	text-align:center;
+	
+}
+#mainmenu a {
+	display:inline-block;
+
+	width: 175px;
+	height: 40px;
+	line-height:40px;
+	text-align:center;
+
+	background-color: #231f20;
+	color:#f0f0f0;
+
+	text-decoration:none;
+	text-transform: uppercase;
+	font-size:25px;
+	font-family: 'source_sans_proextralight';
+}
+#mainmenu a:hover { background-color: #1A1708; }
+
+
+#feature { background-color: #e0e6c1; padding:25px; }
+#sidebar {
+	background-color: #471a12;
+	color:#e8ebee;
+}
+#affiliates {
+	text-align:center;
+	padding:20px;
+}
+#affiliates a {
+	color:#e8ebee;
+	padding:10px;
+	display:inline-block;
+	background-color: #231f20;
+	width:200px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+#affiliates a:hover {
+	background-color: #a62e1a;
+}
+#epilogue { 
+	background-color: #434345;
+	padding:25px; 
+	text-align:center;
+}
+/*Typography*/
+
+h1 { font-size:30px; 
+	color: #f0f0f0;
+	font-family: 'source_sans_proextralight';
+}
+h2 { font-size:20px; 
+	font-family: 'source_sans_proextralight';
+}
+
+p {
+	font-size: 16px;
+	padding:20px 10px;
+	margin:0px;
+}
+.even {
+	background-color: #e7d591;
+}
+
+/*Gallery Styles*/
+#gallery {
+	text-align:center;
+}
+#gallery img {
+	border:solid 5px gray;
+	padding:20px;
+	background-color: #f0f0f0;
+	margin:5px;
+}
+#gallery img:hover {
+	background-color: gray;
+}
+
+#boom
+{ 
+	background-color: #434345; 
+	padding:15px; 
+	text-align:left;
+	font-family: 'source_sans_proextralight';
+}
+.enlarged img{
+	width: 80%;
+	height: 60%;
+}
