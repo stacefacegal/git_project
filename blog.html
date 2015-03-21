@@ -3,85 +3,91 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Supra: Blog </title>
-		<link rel="stylesheet" type="text/css" href="_css/styles.css">s
+		<link rel="stylesheet" type="text/css" media="screen" href="_css/styles.css">
 		<style type="text/css">
-		.tabmenu {
-				padding-left:15px;
-			}
-			.tabmenu a {
-				display:block;
-				background-image:url('_css/tabs-sprite.jpg');
-				background-position:left bottom;
-				width:210px;
-				height:85px;
+		#container {
+		    width: 800px;
+		    height: 500px;
+		    margin: 0 auto;
+		}
+		 
+		#outer {
+		    width: 400px;
+		    height: 200px;
+		    background: #aaa;
+		    margin: 50px auto;
+		    padding: 70px;
+		}
+		 
+		#inner {
+		    width: 400px;
+		    height: 200px;
+		    background: #eee;
+		    margin: 0 auto;
+		    position: absolute;
+		}
+		#inner p {
+		    text-align: center;
+		    font: 25px/200px Helvetica, sans-serif;
+		}
+		 
+		#inner p a {
+		    color: #000;
+		    text-decoration: none;
+		}
+		 
+		#inner p a:hover {
+		    text-decoration: underline;
+		}
 
-				line-height:100px;
-				text-align:center;
-				font-size:20px;
-				font-weight:bold;
-				text-decoration:none;
+		* {
+		    margin: 0;
+		    padding: 0;
+		}
+		 
+		/*Text Styles*/
+		 
+		#headline {
+		    text-align: center;
+		    margin: 20px 0;
+		}
+		 
+		/*Gallery Styles*/
+ 
+		#blog {
+		    width: 720px;
+		    height: 370px;
+		    margin: 0 auto;
+		    padding: 10px;
+		    background: gray;
+		}
+		/*List Styles*/
+		ul {
+		    list-style-type: none;
+		    position: absolute;
+		    width: 720px;
+		}
+		 
+		#blog ul li {
+		    float: left;
+		    margin: 10px;
+		    background: white;
+		    height: 100px;
+		    width: 100px;
+		}
+		 
+		#blog ul li:hover {
+		    border: 3px solid black;
+		    margin: 7px;
+		}
+		 
+		#blog ul li img{
+		    height: 100px;
+		    width: 100px;
+		}
 
-				color:#4c4e51;
-				float:left; 
-				position:relative;
-				z-index:100;
-			}
-			.tabmenu a:hover {
-				background-position:right top;
-			}
-			.tabmenu a.chosen {
-				color:#102439;
-				background-position:left top;
-				top:3px;
-				font-size:30px;
-			}
-
-			.tab {
-				clear:both;
-				background-color:#F0F0F0;
-				padding:25px;
-			}
-			
-
-			#theLight { 
-				display: none;
-				background-color: #fff;
-				padding: 25px;
-				width: 700px;
-				height: 500px;
-				position: fixed;
-				top: 45%;
-				left: 45%;
-
-				margin-top: -225px;
-				margin-left: -325px;
-
-				z-index: 10;
-
-
-			}
-			#theLight .close { }
-			#theLight .target { }
-
-
-			#theDark { 
-				display: none;
-				background-color: #000;
-				padding: 25px;
-				/*width: 700%;
-				height: 100%;*/
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				opacity: .7;
-				
-				z-index: 5;
-			}
-
-			
 		</style>
+
 	</head>
 	<body>
 			<div class="container">
@@ -94,148 +100,59 @@
 					<a href="blog.html">Blog</a>
 			</div>
 
-
-
-		<header id="masthead">
+			<header id="masthead">
 
 			<div class="container">
 			<header id="boom"> <h1>BLOG</h1>
 
 			</header>
-
-			<div class="tabbed">
-					<nav class="tabmenu">
-						<a class="chosen" href="#tab1">.</a>
-						<a href="#tab2">..</a>
-						<a href="#tab3">...</a>
-						<a href="#tab4">....</a>
-				</nav>
-
-					<div class="tab" id="tab1">
-						<div class="pic"><img src="_images/_blog/shoe_01.jpg"/></div>
-								<h1>TIE DYE PASSION</h1>
-								<p>
-									Lizard King’s latest signature Passion mid top arrives in a tie dye blast of Lizard’s favorite colors—green and purple. Paired with the classic stylings of a black suede desert boot atop a black vulcanized sole with white foxing, the Passion’s unique padded canvas flap features a vibrant burst of green and purple passion to keep the vibes high. The tie dye Passion is available now at fine SUPRA retailers worldwide.
-								</p>
-					</div>
-					<div class="tab" id="tab2">
-						<div class="pic"><img src="_images/_blog/shoe_02.jpg"/></div>
-							<h1>LINEN SKYPTOPS</h1>
-							<p>
-								Arriving in three new linen options is the iconic SUPRA Skytop. Coated for added strength, this true high top rises up from a traditional vulcanized sole to showcase its highly imitated design. The Skytop is now cloaked in khaki, slate blue, or grey linen, offering a range of classic colors to this pillar of the SUPRA footwear line. The linen Skytops are available now at fine SUPRA retailers.
-						</div>
-					</div>
-					<div class="tab" id="tab3">
-						<div class="pic"><img src="_images/_blog/shoe_03.jpg"/></div>
-						<h1>THE SPHINX</h1>
-						<p>
-							The SUPRA Sphinx is available now in an all black leather and nubuck upper with red and white accents, and a red padded mesh interior.
-
-						SUPRA is proud to announce its latest monument to design with the addition of the new high top Sphinx to the SPECTRE collection. Built atop a black cup sole with white sidewalls, the Sphinx features an athletic inspired toe box and a descending heel collar with scalloped padding for optimum support and fit. For added breathability, perforations adorn the midsection while a padded mesh lining ensure interior comfort and stability. Debuting in three color options, the Sphinx is available now at SUPRA retailers worldwide.
-					</div>
-					<div class="tab" id="tab4">
-						<div class="pic"><img src="_images/_blog/shoe_04.jpg"/></div>
-						<h1>ST. PATRICK’S MAGAZINE</h1>
-						<p>
-							In the spirit of St. Patrick’s Day, SUPRA Is proud to offer a limited edition Magazine in green and gold from the Spectre collection. This dynamic high top composed of sharp angular and geometric paneling features an extended heel bar and upper eye stay. In keeping with St. Paddy’s, the Magazine has a long, clean vamp and perforated ankle pod made of Stephen’s Green premium leather and nubuck and a collar cloaked in iridescent gold. The St. Patrick’s Magazine will be available starting March 8th at select SUPRA retailers worldwide.
-					</div>
-				</div>
-			</section>
-			<!-- added this -->
-			<!-- <div id="theLight">
-				<img class="close" src="_css/close.png" height="42" width="42" />
-				<div class="target">
-					This is the light div. Our chosen elements will be displayed here.
-				</div>
+			 
+			<div id="blog" class="zoom">
+			    <ul>
+			        <li class="zoom"><img src="_images/supra01.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra02.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra03.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra04.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra05.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra06.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra07.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra08.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra09.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra10.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra11.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra12.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra13.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra14.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra15.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra16.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra17.png" height="600" width="600"></li>
+			        <li class="zoom"><img src="_images/supra18.png" height="600" width="600"></li>
+			    </ul>
+			     
 			</div>
-			<div id="theDark">This is the dark div</div> -->
-
-	
-		</nav>
-		
-		<!-- <footer id="epilogue"> -->
 		
 		<script type="text/javascript" src="_js/jquery-1.10.2.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="_js/sylvester.js"></script>
+		<script type="text/javascript" src="_js/purecssmatrix.js"></script>
+		<script type="text/javascript" src="_js/jquery.animtrans.js"></script>
+		<script type="text/javascript" src="_js/jquery.zoomooz.js"></script>
 		<script type="text/javascript">
-		$(document).ready(function (){
-			console.log("hello I am working!");
-			
-			var tabs = $(".tabbed .tab");
-			var navLinks = $(".tabmenu a")
 
-
-			tabs.hide();
-
-			$(tabs[0]).show();
-			// var myArray = new Array('egg','milk','cheese');
-			// console.log(myArray[0]);
-
-			navLinks.click(tab_choose);
-
-			function tab_choose(event){
-				event.preventDefault();
-
-				var theLink = $(this);
-				var theHref = theLink.attr("href");
-
-				navLinks.removeClass('chosen');
-				theLink.addClass('chosen');
-
-
-
-				// console.log(theHref)
-				tabs.hide();
-				$(theHref).show();
-
-
-			}
-
-			var theLight = $('#theLight');
-			var theDark = $('#theDark');
-			var closebutton = theLight.find('.close');
-			var theTarget = theLight.find('.target');
-			var theImage = $("#gallery img");
-
-			theImage.click(light_on);
-			closebutton.click(light_off);
-			theDark.click(light_off);
-
-			function light_on(){
-				console.log("ouch that hurts");
-				var thisImg = $(this).clone();
-
-				// var theSrc = thisImg.attr("src");
-				var theTitle = thisImg.attr("title");
-				var theDesc = thisImg.attr("alt");
-
-				theTarget.html(thisImg);
-				$('<h1>'+theTitle+'</h1>').appendTo(theTarget);
-				$('<p>'+theDesc+'</p>').appendTo(theTarget);
-				
-				$("#theLight").fadeIn("#gallery img");
-				$("#theDark").fadeIn("#gallery img");
-
-
-
-				theLight.show();
-				theDark.show();
-
-		}
-			function light_off(){
-
-
-			theLight.hide();
-			theDark.hide();
-
-
-		}
-
-			
-
+		$(document).ready(function() {
+	    $(".zoom").click(function(evt) {
+	        evt.stopPropagation();
+	        $(this).zoomTo();
 		});
+	    
+	    $(window).click(function(evt) {
+	        evt.stopPropagation();
+	        $("body").zoomTo();
+		});
+	    
+	    $("body").zoomTo();
 
-
-		
+});
 
 
 
